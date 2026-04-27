@@ -2,52 +2,579 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Tanimul Islam | Mobile Application Developer</title>
+    <meta name="description" content="Tanimul Islam - Mobile Application Developer specializing in Android, Kotlin, Flutter, and Firebase.">
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- custom css file link  -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
-    
-<!-- navbar section starts  -->
 
-<nav class="navbar">
-    <a href="index.html"> <i class="fas fa-home"></i> <span>home</span> </a>
-    <a href="about.html"> <i class="fas fa-user"></i> <span>about</span> </a>
-    <a href="portfolio.html"> <i class="fas fa-briefcase"></i> <span>portfolio</span> </a>
-    <a href="blogs.html"> <i class="fas fa-blog"></i> <span>blogs</span> </a>
-    <a href="contact.html"> <i class="fas fa-address-book"></i> <span>contact</span> </a>
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+            <i class="fas fa-mobile-alt logo-icon"></i>
+            <span>tanimul<span class="logo-accent">.dev</span></span>
+        </a>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="Cv_of_Tanimul_ islam.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Resume</a></li>
+            <li><a href="#contact" class="nav-btn-filled">Hire Me</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#education" onclick="closeMenu()">Resume</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li><a href="Cv_of_Tanimul_ islam.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Download Resume</a></li>
+            <li><a href="#contact" class="nav-btn-filled" onclick="closeMenu()">Hire Me</a></li>
+        </ul>
+    </div>
 </nav>
 
-<!-- navbar section ends -->
+<main>
 
-<!-- home section starts  -->
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
 
-<section class="home">
+    <div class="hero-inner">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for new opportunities
+            </div>
 
-    <div class="image">
-        <img src="images/profile_image.JPG" alt="">
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Tanimul Islam</span>
+            </h1>
+
+            <p class="hero-role">Mobile Application Developer</p>
+
+            <p class="hero-desc">
+                Passionate mobile developer specializing in Android, Kotlin, Flutter and Firebase.
+                Building intuitive mobile experiences with clean architecture and modern design patterns.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-down"></i></a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+                <a href="Cv_of_Tanimul_ islam.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Resume</a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/Tanimul" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tanimul-islam-131102232" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://stackoverflow.com/users/18262004" target="_blank" aria-label="StackOverflow"><i class="fab fa-stack-overflow"></i></a>
+                <a href="mailto:tanimulislam.fuad@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="images/profile_image.JPG" alt="Tanimul Islam">
+            </div>
+        </div>
     </div>
 
-    <div class="content">
-        <h2>Hello, I'm</h2>
-        <h4>TANIMUL ISLAM</h4>
-        <span>Mobile Application Developer</span>
-        <p>To build up my career in the development sector with an organization where there are opportunities 
-           to apply my specialized knowledge, creativity, experience, skill, hard work and the place of work 
-           provides potential avenues for learning, growing and achieving goals of the organization.</p>
-        <a href="about.html" class="btn"> about me <i class="fas fa-user"></i> </a>
+    <div class="scroll-indicator">
+        <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        <span>Scroll Down</span>
     </div>
-
 </section>
 
-<!-- home section ends -->
+<!-- ========== ABOUT ========== -->
+<section class="about" id="about">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <p class="section-tag">Who I Am</p>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-left reveal">
+                <div class="card about-bio">
+                    <h3><i class="fas fa-user-circle"></i> Personal Info</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Tanimul Islam</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Role</span>
+                            <span class="info-value">Mobile App Developer</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value" style="text-transform:none;font-size:0.8rem">tanimulislam.fuad@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Dhaka, Bangladesh</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Experience</span>
+                            <span class="info-value">2+ Years</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Freelance</span>
+                            <span class="info-value available">Available</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-cards">
+                    <div class="card highlight-card">
+                        <div class="hc-icon sky"><i class="fab fa-android"></i></div>
+                        <div>
+                            <h4>Android Development</h4>
+                            <p>Native Android with Kotlin &amp; Java, Jetpack components, MVVM architecture</p>
+                        </div>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="hc-icon indigo"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h4>Cross-Platform</h4>
+                            <p>Flutter &amp; Dart for iOS and Android from a single codebase</p>
+                        </div>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="hc-icon violet"><i class="fas fa-database"></i></div>
+                        <div>
+                            <h4>Backend Integration</h4>
+                            <p>Firebase, REST APIs with Retrofit, MySQL, Room Database</p>
+                        </div>
+                    </div>
+                    <div class="card highlight-card">
+                        <div class="hc-icon emerald"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <h4>Academic Background</h4>
+                            <p>M.Sc &amp; B.Sc in CSE from Daffodil International University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-stats reveal">
+                <div class="card stat-card">
+                    <h3>2+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>7</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>10+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="card stat-card">
+                    <h3>2</h3>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== SKILLS ========== -->
+<section class="skills" id="skills">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <p class="section-tag">What I Know</p>
+            <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fab fa-android sky-text"></i>
+                    <h3>Android Development</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag sky">Android SDK</span>
+                    <span class="skill-tag sky">Kotlin</span>
+                    <span class="skill-tag sky">Java</span>
+                    <span class="skill-tag sky">Jetpack</span>
+                    <span class="skill-tag sky">MVVM</span>
+                    <span class="skill-tag sky">Retrofit</span>
+                </div>
+            </div>
+
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fas fa-layer-group indigo-text"></i>
+                    <h3>Cross-Platform</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag indigo">Flutter</span>
+                    <span class="skill-tag indigo">Dart</span>
+                    <span class="skill-tag indigo">Provider</span>
+                    <span class="skill-tag indigo">BLoC</span>
+                    <span class="skill-tag indigo">GetX</span>
+                </div>
+            </div>
+
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fas fa-fire violet-text"></i>
+                    <h3>Backend &amp; Database</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag violet">Firebase</span>
+                    <span class="skill-tag violet">MySQL</span>
+                    <span class="skill-tag violet">SQLite</span>
+                    <span class="skill-tag violet">Room DB</span>
+                    <span class="skill-tag violet">PHP</span>
+                    <span class="skill-tag violet">REST API</span>
+                </div>
+            </div>
+
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fas fa-map-marked-alt amber-text"></i>
+                    <h3>APIs &amp; Services</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag amber">Google Maps API</span>
+                    <span class="skill-tag amber">Places API</span>
+                    <span class="skill-tag amber">Direction API</span>
+                    <span class="skill-tag amber">FCM</span>
+                </div>
+            </div>
+
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fas fa-tools emerald-text"></i>
+                    <h3>Tools &amp; DevOps</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag emerald">Git</span>
+                    <span class="skill-tag emerald">GitHub</span>
+                    <span class="skill-tag emerald">Android Studio</span>
+                    <span class="skill-tag emerald">VS Code</span>
+                    <span class="skill-tag emerald">Terminal</span>
+                </div>
+            </div>
+
+            <div class="card skill-category reveal">
+                <div class="skill-cat-header">
+                    <i class="fas fa-code rose-text"></i>
+                    <h3>Languages</h3>
+                </div>
+                <div class="skill-tags">
+                    <span class="skill-tag rose">Kotlin</span>
+                    <span class="skill-tag rose">Java</span>
+                    <span class="skill-tag rose">Dart</span>
+                    <span class="skill-tag rose">Python</span>
+                    <span class="skill-tag rose">C</span>
+                    <span class="skill-tag rose">PHP</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PROJECTS ========== -->
+<section class="projects" id="projects">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <p class="section-tag">What I've Built</p>
+            <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="projects-grid">
+            <div class="card project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon sky"><i class="fas fa-city"></i></div>
+                    <span class="project-badge sky">Android App</span>
+                </div>
+                <h3>Smart City</h3>
+                <p>An Android application to create awareness among city people regarding the garbage issue. Uses Google Maps API to locate nearby garbage bins and report issues.</p>
+                <div class="project-tags">
+                    <span>Android</span><span>Kotlin</span><span>Google Maps API</span><span>Firebase</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link sky"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <div class="card project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon indigo"><i class="fas fa-shopping-cart"></i></div>
+                    <span class="project-badge indigo">E-Commerce</span>
+                </div>
+                <h3>E-Commerce App</h3>
+                <p>A full-featured e-commerce mobile application with product listings, cart management, order tracking and Firebase authentication for secure user sessions.</p>
+                <div class="project-tags">
+                    <span>Flutter</span><span>Dart</span><span>Firebase</span><span>REST API</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link indigo"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <div class="card project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon violet"><i class="fas fa-map-marked-alt"></i></div>
+                    <span class="project-badge violet">Location App</span>
+                </div>
+                <h3>Location Tracker</h3>
+                <p>Real-time location tracking application with Google Maps integration, geofencing alerts and turn-by-turn direction guidance using the Direction API.</p>
+                <div class="project-tags">
+                    <span>Android</span><span>Java</span><span>Google Maps</span><span>Room DB</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link violet"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+
+            <div class="card project-card reveal">
+                <div class="project-header">
+                    <div class="project-icon emerald"><i class="fas fa-comments"></i></div>
+                    <span class="project-badge emerald">Social App</span>
+                </div>
+                <h3>Chat Application</h3>
+                <p>Real-time chat app with Firebase Firestore, push notifications via FCM, media sharing and complete user authentication with profile management.</p>
+                <div class="project-tags">
+                    <span>Android</span><span>Kotlin</span><span>Firebase</span><span>FCM</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" class="project-link emerald"><i class="fab fa-github"></i> View Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== EDUCATION ========== -->
+<section class="education" id="education">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <p class="section-tag">My Background</p>
+            <h2 class="section-title">Education &amp; <span class="gradient-text">Resume</span></h2>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot sky"><i class="fas fa-graduation-cap"></i></div>
+                <div class="card timeline-content">
+                    <span class="timeline-date sky">2020 – 2021</span>
+                    <h3>M.Sc in Computer Science &amp; Engineering</h3>
+                    <p>Daffodil International University, Dhaka, Bangladesh</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot indigo"><i class="fas fa-university"></i></div>
+                <div class="card timeline-content">
+                    <span class="timeline-date indigo">2016 – 2020</span>
+                    <h3>B.Sc in Computer Science &amp; Engineering</h3>
+                    <p>Daffodil International University, Dhaka, Bangladesh</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot violet"><i class="fas fa-certificate"></i></div>
+                <div class="card timeline-content">
+                    <span class="timeline-date violet">2014 – 2015</span>
+                    <h3>Higher Secondary Certificate (HSC)</h3>
+                    <p>Cambrian College, Dhaka — Department of Science</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <div class="timeline-dot emerald"><i class="fas fa-school"></i></div>
+                <div class="card timeline-content">
+                    <span class="timeline-date emerald">2012 – 2013</span>
+                    <h3>Secondary School Certificate (SSC)</h3>
+                    <p>Compangonj Model High School, Noakhali — Department of Science</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="resume-cta reveal">
+            <a href="Cv_of_Tanimul_ islam.pdf" download class="btn-primary">
+                <i class="fas fa-download"></i> Download Full Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="contact" id="contact">
+    <div class="section-container">
+        <div class="section-header reveal">
+            <p class="section-tag">Get In Touch</p>
+            <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Let's work together</h3>
+                <p>I'm currently available for freelance work and open to full-time opportunities. Feel free to reach out!</p>
+
+                <div class="contact-items">
+                    <div class="card contact-item">
+                        <div class="contact-icon sky"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <span>Email</span>
+                            <p>tanimulislam.fuad@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="card contact-item">
+                        <div class="contact-icon indigo"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <span>Location</span>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="card contact-item">
+                        <div class="contact-icon violet"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <span>Phone</span>
+                            <p>+880 1810 620700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-socials">
+                    <a href="https://github.com/Tanimul" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/tanimul-islam-131102232" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://stackoverflow.com/users/18262004" target="_blank" class="social-btn"><i class="fab fa-stack-overflow"></i></a>
+                    <a href="https://www.facebook.com/tanimulislam.fuad" target="_blank" class="social-btn"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/fuad7594" target="_blank" class="social-btn"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form reveal">
+                <form action="https://formsubmit.co/tanimulislam.fuad@gmail.com" method="POST" id="contactForm">
+                    <input type="hidden" name="_subject" value="New message from portfolio">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full-width">
+                        Send Message <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-inner">
+        <a href="#hero" class="footer-logo">
+            <i class="fas fa-mobile-alt"></i>
+            <span>tanimul<span class="logo-accent">.dev</span></span>
+        </a>
+
+        <nav class="footer-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Resume</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="footer-socials">
+            <a href="https://github.com/Tanimul" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/tanimul-islam-131102232" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://stackoverflow.com/users/18262004" target="_blank"><i class="fab fa-stack-overflow"></i></a>
+            <a href="mailto:tanimulislam.fuad@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Tanimul Islam. Built with HTML, CSS &amp; JavaScript.</p>
+    </div>
+</footer>
+
+<script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Navbar scroll glassmorphism
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Mobile hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('open');
+        hamburgerIcon.className = isOpen ? 'fas fa-times' : 'fas fa-bars';
+    });
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        hamburgerIcon.className = 'fas fa-bars';
+    }
+
+    // Scroll reveal with staggered delay
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => entry.target.classList.add('revealed'), i * 80);
+            }
+        });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            const href = a.getAttribute('href');
+            if (href === '#') return;
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
 
 </body>
 </html>
