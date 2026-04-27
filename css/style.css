@@ -682,6 +682,124 @@ ul { list-style: none; }
 .project-link.emerald { color: var(--emerald); border-color: rgba(52, 211, 153, 0.4); }
 .project-link.emerald:hover { background: rgba(52, 211, 153, 0.1); }
 
+/* ========== BLOGS ========== */
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.blog-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.blog-card:hover .blog-image img { transform: scale(1.05); }
+
+/* Placeholder for blogs without images */
+.blog-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.blog-image-placeholder.indigo { background: linear-gradient(135deg, rgba(129, 140, 248, 0.15), rgba(129, 140, 248, 0.05)); color: var(--indigo); }
+.blog-image-placeholder.violet { background: linear-gradient(135deg, rgba(167, 139, 250, 0.15), rgba(167, 139, 250, 0.05)); color: var(--violet); }
+.blog-image-placeholder.emerald { background: linear-gradient(135deg, rgba(52, 211, 153, 0.15), rgba(52, 211, 153, 0.05)); color: var(--emerald); }
+
+.blog-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 999px;
+  border: 1px solid;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  backdrop-filter: blur(6px);
+}
+.blog-category.sky    { color: var(--sky);     border-color: rgba(56, 189, 248, 0.5);  background: rgba(10, 15, 30, 0.7); }
+.blog-category.indigo { color: var(--indigo);  border-color: rgba(129, 140, 248, 0.5); background: rgba(10, 15, 30, 0.7); }
+.blog-category.violet { color: var(--violet);  border-color: rgba(167, 139, 250, 0.5); background: rgba(10, 15, 30, 0.7); }
+.blog-category.emerald { color: var(--emerald); border-color: rgba(52, 211, 153, 0.5); background: rgba(10, 15, 30, 0.7); }
+
+.blog-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.blog-meta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.blog-meta span {
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.blog-meta i { color: var(--sky); font-size: 0.7rem; }
+
+.blog-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+.blog-body p {
+  font-size: 0.855rem;
+  color: var(--muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+.blog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 4px;
+  transition: gap 0.2s, color 0.2s;
+}
+.blog-link.sky { color: var(--sky); }
+.blog-link.sky:hover { gap: 10px; color: #7dd3fc; }
+
+.blog-link-disabled {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .blogs-grid { grid-template-columns: 1fr; }
+}
+
 /* ========== EDUCATION ========== */
 .timeline {
   max-width: 720px;
