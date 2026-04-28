@@ -34,9 +34,13 @@
             <li><a href="#blogs">Blogs</a></li>
             <li><a href="#education">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="Cv_of_Tanimul_ islam.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Resume</a></li>
+            <li><a href="Tanimul Islam Resume.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Resume</a></li>
             <li><a href="#contact" class="nav-btn-filled">Hire Me</a></li>
         </ul>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">
+            <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
 
         <button class="hamburger" id="hamburger" aria-label="Toggle menu">
             <i class="fas fa-bars" id="hamburgerIcon"></i>
@@ -51,7 +55,7 @@
             <li><a href="#blogs" onclick="closeMenu()">Blogs</a></li>
             <li><a href="#education" onclick="closeMenu()">Resume</a></li>
             <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
-            <li><a href="Cv_of_Tanimul_ islam.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Download Resume</a></li>
+            <li><a href="Tanimul Islam Resume.pdf" download class="nav-btn-outline"><i class="fas fa-download"></i> Download Resume</a></li>
             <li><a href="#contact" class="nav-btn-filled" onclick="closeMenu()">Hire Me</a></li>
         </ul>
     </div>
@@ -85,7 +89,7 @@
             <div class="hero-actions">
                 <a href="#projects" class="btn-primary">View My Work <i class="fas fa-arrow-down"></i></a>
                 <a href="#contact" class="btn-secondary">Get In Touch</a>
-                <a href="Cv_of_Tanimul_ islam.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Resume</a>
+                <a href="Tanimul Islam Resume.pdf" download class="btn-ghost"><i class="fas fa-download"></i> Resume</a>
             </div>
 
             <div class="hero-socials">
@@ -498,7 +502,7 @@
         </div>
 
         <div class="resume-cta reveal">
-            <a href="Cv_of_Tanimul_ islam.pdf" download class="btn-primary">
+            <a href="Tanimul Islam Resume.pdf" download class="btn-primary">
                 <i class="fas fa-download"></i> Download Full Resume
             </a>
         </div>
@@ -557,17 +561,21 @@
                     <input type="hidden" name="_captcha" value="false">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry / Collaboration">
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
                     </div>
                     <button type="submit" class="btn-primary full-width">
                         Send Message <i class="fas fa-paper-plane"></i>
@@ -592,6 +600,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#blogs">Blogs</a>
             <a href="#education">Resume</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -604,13 +613,30 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> Tanimul Islam. Built with HTML, CSS &amp; JavaScript.</p>
+        <p>Copyright &copy; <span id="year"></span> Tanimul Islam. All rights reserved.</p>
     </div>
 </footer>
 
 <script>
     // Dynamic year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const body = document.body;
+
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    if (savedTheme === 'light') {
+        body.classList.add('light');
+        themeIcon.className = 'fas fa-sun';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        const isLight = body.classList.toggle('light');
+        themeIcon.className = isLight ? 'fas fa-sun' : 'fas fa-moon';
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
 
     // Navbar scroll glassmorphism
     const navbar = document.getElementById('navbar');
